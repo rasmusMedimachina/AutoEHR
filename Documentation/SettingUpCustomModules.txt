@@ -1,0 +1,5 @@
+1. Skapa ett x.py-skript
+2. Lägg den i mappen du vill ha som bibliotek
+(annars får man importera från *samma* mapp med "import .myModule"
+3. Skapa en miljövariabel som heter PYTHONPATH och lägg till din mapp där.
+4. Du ska nu kunna importera, "import x"

@@ -1,0 +1,21 @@
+pip install pillow
+pip install matplotlib
+pip install beautifulsoup4
+pip install jupyterlab
+pip install opencv-contrib-python
+pip install PyAutoGUI
+pip install requests
+pip install pynput
+pip install keyboard
+
+----------- OCR --------------------
+https://github.com/UB-Mannheim/tesseract/wiki install
+conda install -c conda-forge pytesseract
+# Också hämta språk på https://tesseract-ocr.github.io/tessdoc/Data-Files
+
+#py -m pip install selenium -U
+
+
+
+Enable large file support
+git lfs install
