@@ -1,0 +1,94 @@
+<html>
+<head>
+    <style type="text/css">
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+        }
+
+        div.page {
+            position:relative;
+            top:-15cm;
+            width: 21cm;
+            height: 29.7cm;
+            border: none;
+            margin: 0px;
+        }
+
+        .standardField{
+            position:absolute;
+            font-size:18px;
+            border:1px solid grey;
+            background-color:azure;
+        }
+
+        .invisibleLabel{
+            color:blue;
+            font-size:14px;
+            font-weight:bold;
+            position:absolute;
+        }
+
+        @media print {
+            @page {
+                size: auto; /* auto is the initial value */
+                margin: 0; /* this affects the margin in the printer settings */
+            }
+
+            div.page {
+                position: relative;
+                top: 0cm;
+                width: 21cm;
+                height: 29.7cm;
+                border: 1px solid black;
+                margin: 0px;
+            }
+
+            .standardField {
+                border:none;
+                background-color:none;
+            }
+
+            .invisibleLabel {
+                display:none;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body onload="document.getElementById('dateField').value=new Date().toJSON().slice(0,10).replace(/-/g,'-')">
+    <div class="page">
+        <label class="invisibleLabel" style="left:5.8cm;top:18.8cm;">Vaccin</label>
+        <input type="text" class="standardField" style="left:5.8cm;top:19.25cm;" value="" />
+
+        <label class="invisibleLabel" style="left:4.9cm;top:21.5cm;">Namn</label>
+        <input type="text" class="standardField" style="left:4.9cm;top:21.9cm;" value="" />
+
+        <label class="invisibleLabel" style="left:8.2cm;top:19.8cm;">Datum</label>
+        <input id="dateField" type="text" class="standardField" style="left:8.2cm;top:20.25cm;width:4cm;" value="" />
+
+        <label class="invisibleLabel" style="left:3.35cm;top:23.25cm;">Batch-nr</label>
+        <input type="text" class="standardField" style="left:3.35cm;top:23.65cm;" value="" />
+
+        <label class="invisibleLabel" style="left:11.3cm;top:22.6cm;">Ev Kommentar</label>
+        <textarea type="text" class="standardField" style="left:11.3cm;top:23cm;width:6cm;height:1.5cm;" value="" /></textarea>
+
+        <label class="invisibleLabel" style="left:5.35cm;top:19.9cm;width:26px;">Dos 1</label>
+        <input type="text" class="standardField" style="left:5.35cm;top:20.3cm;width:26px;" value="X" />
+
+        <label class="invisibleLabel" style="left:13.45cm;top:20.2cm;width:26px;">Höger arm</label>
+        <input type="text" class="standardField" style="left:13.45cm;top:20.6cm;width:26px;" value="" />
+
+        <label class="invisibleLabel" style="left:17.45cm;top:20.2cm;width:26px;">Vänster arm</label>
+        <input type="text" class="standardField" style="left:17.45cm;top:20.6cm;width:26px;" value="X" />
+
+        <label class="invisibleLabel" style="left:5.8cm;top:24.8cm;">Enhet</label>
+        <input type="text" class="standardField" style="left:5.8cm;top:25.25cm;width:10cm;" value="Hälsocentralen Sankt Hans" />
+    </div>
+</body>
+</html>
