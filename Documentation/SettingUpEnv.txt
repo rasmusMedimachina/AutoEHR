@@ -19,3 +19,9 @@ conda install -c conda-forge pytesseract
 
 Enable large file support
 git lfs install
+
+
+------------ Widgets --------------
+(https://medium.com/@jdchipox/how-to-interact-with-jupyter-33a98686f24e)
+first, install node. Then:
+jupyter labextension install @jupyter-widgets/jupyterlab-manager
