@@ -17,7 +17,7 @@ conda install -c conda-forge pytesseract
 
 
 
-Enable large file support
+Enable large file support after installing it
 git lfs install
 
 
