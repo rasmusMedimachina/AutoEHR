@@ -7,6 +7,7 @@ pip install PyAutoGUI
 pip install requests
 pip install pynput
 pip install keyboard
+pip install termcolor
 
 ----------- OCR --------------------
 https://github.com/UB-Mannheim/tesseract/wiki install
@@ -17,6 +18,9 @@ conda install -c conda-forge pytesseract
 
 
 
+---------------- Git ---------------
+git config user.name "Rasmus"
+git config user.email rasmus.arvidsson@ptj.se
 Enable large file support after installing it
 git lfs install
 
@@ -24,5 +28,5 @@ git lfs install
 ------------ Widgets --------------
 (https://medium.com/@jdchipox/how-to-interact-with-jupyter-33a98686f24e)
 first, install node. Then:
+pip install ipywidgets
 jupyter labextension install @jupyter-widgets/jupyterlab-manager
-pip install termcolor
