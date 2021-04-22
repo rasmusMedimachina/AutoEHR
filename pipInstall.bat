@@ -1,3 +1,4 @@
+pip install --upgrade pip
 pip install pillow
 pip install matplotlib
 pip install beautifulsoup4
