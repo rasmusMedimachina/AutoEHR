@@ -133,3 +133,12 @@ dmypy.json
 # Ignore all files in the ValidationImages folder
 */ValidationImages/*
 Schedule/Input/*
+
+# Ignore Excel files
+*.xlsx
+
+# Ignore CSV files
+*.csv
+
+# Ignore PDF files
+*.pdf

@@ -15,16 +15,23 @@ import pytesseract
 
 
 def imshow(img, cmap=None, size=10):
+    # Handle file path as input
     if type(img) == str:
         img = cv.imread(img)
-    elif(not type(img) == np.ndarray):
+    # Handle PIL image
+    elif isinstance(img, Image.Image):  # Check if it's a PIL Image
+        img = np.array(img)
+    # Handle unsupported types
+    elif not isinstance(img, np.ndarray):
+        print("Unable to print image")
         return
     
-    fig = plt.figure(figsize=(size,size))
-    ax = plt.Axes(fig, [0,0,1,1])
+    # Plot the image
+    fig = plt.figure(figsize=(size, size))
+    ax = plt.Axes(fig, [0, 0, 1, 1])
     ax.set_axis_off()
     fig.add_axes(ax)
-    ax.imshow(img, cmap)
+    ax.imshow(img, cmap=cmap)
 
 def get_inverted(image):
     return cv.bitwise_not(image)
