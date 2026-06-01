@@ -88,10 +88,14 @@ def waitForElementDisappear(path, beforeStart = -1, limit = -1, waitTime = -1, c
     beforeStart, limit, waitTime = getWaitAndLimit(beforeStart, limit, waitTime)
     sleep(beforeStart)
     
+ 
     while timePassed < limit:
         try:
             x, y = pag.locateCenterOnScreen(path, confidence = conf)
+        except pag.ImageNotFoundException:
+            return True
         except Exception as e:
+            print(str(e))
             if (str(e) == "cannot unpack non-iterable NoneType object"):
                 return True
             else:

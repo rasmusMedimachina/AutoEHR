@@ -51,7 +51,7 @@ def thresholdingAdaptive(image):
 
 def capture_and_ocr(x, y, width=300, height=22, lang='swe', resize_factor=2, save_as=None):
     # Capture screenshot
-    screenshot = pag.screenshot(region=(x, y, width, height))
+    screenshot = pag.screenshot(region=(int(x), int(y), int(width), int(height)))
 
     # Enlarge the image by 50%
     width, height = screenshot.size

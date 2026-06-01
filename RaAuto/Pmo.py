@@ -19,6 +19,7 @@ class ImgsEnum:
         self.AtgardRelateradCovid19 = os.path.join(imagesPath, "Vaccine", "AtgardRelateradCovid19.png")
         self.CitrixIcon = os.path.join(imagesPath, "CitrixIcon.png")
         self.CitrixIcon2 = os.path.join(imagesPath, "CitrixIcon2.png")
+        self.CitrixIcon3 = os.path.join(imagesPath, "CitrixIcon3.png")
         self.LotNrLabel = os.path.join(imagesPath, "Vaccine", "LotNrLabel.png")
         self.LotNrLabel2 = os.path.join(imagesPath, "Vaccine", "LotNrLabel2.png")
         self.LotNrLabel3 = os.path.join(imagesPath, "Vaccine", "LotNrLabel3.png")
@@ -52,7 +53,11 @@ class ImgsEnum:
 IMG = ImgsEnum(os.path.join("..", "Images"))
 
 def OpenPMO():
-    return waitAndClickOneOf([IMG.CitrixIcon, IMG.CitrixIcon2])
+    height = pag.size().height
+    width = pag.size().width
+    pag.moveTo(width / 2, height)
+    pag.click(button='left')
+    return waitAndClickOneOf([IMG.CitrixIcon, IMG.CitrixIcon2, IMG.CitrixIcon3])
 
 
 def SignOrSave():
